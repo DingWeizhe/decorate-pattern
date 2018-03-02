@@ -1,9 +1,7 @@
 import { Decorator } from "./decorator";
 import { Meal } from "../meal/meal";
 
-export class Cheese implements Decorator {
-  constructor(public meal: Meal) {}
-
+export class Cheese extends Decorator {
   getName(): string {
     return "加起司 " + this.meal.getName();
   }
